@@ -1,37 +1,19 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
-namespace WpfApp
+﻿namespace WpfApp
 {
-    public class ViewModel : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void SetProperty<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (field.Equals(value))
-                return;
-            field = value;
-            NotifyPropertyChanged(propertyName);
-        }
-
-        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
     public class MainViewModoel : ViewModel
     {
+        string _title;
+        public string Title
+        {
+            get { return _title; }
+            set { SetProperty(ref _title, value); }
+        }
+
         decimal _value;
         public decimal Value
         {
             get { return _value; }
-            set
-            {
-                SetProperty(ref _value, value);
-            }
+            set { SetProperty(ref _value, value); }
         }
     }
 }

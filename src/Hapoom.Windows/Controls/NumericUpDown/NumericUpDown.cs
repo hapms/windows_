@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace Hapoom.Windows.Controls
 {
@@ -130,15 +131,14 @@ namespace Hapoom.Windows.Controls
             remove { RemoveHandler(TextChangedEvent, value); }
         }
 
-        private void OnTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void OnTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             var text = (e.Source as TextBox)?.Text ?? "0";
             if (text.Length > 18)
                 text = decimal.MaxValue.ToString();
-            Text  = text;
-            Value = decimal.Parse(Text);
+            SetValue(text);
         }
-        private void OnTextBoxMouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+        private void OnTextBoxMouseWheel(object sender, MouseWheelEventArgs e)
         {
             if (e.Delta > 0)
                 Up();
@@ -161,6 +161,11 @@ namespace Hapoom.Windows.Controls
         {
             Value = value;
             Text  = value.ToString();
+        }
+        private void SetValue(string value)
+        {
+            Value = decimal.Parse(value);
+            Text  = value;
         }
 
         public override void OnApplyTemplate()

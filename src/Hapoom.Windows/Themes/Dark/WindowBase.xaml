@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color           x:Key="Window.Border.DropShadow">#FFBEDDF2</Color>
+    <Color           x:Key="Window.Border.DropShadow.InActive">Silver</Color>
+    <SolidColorBrush x:Key="Window.Logo1"                   Color="#FF494949"/>
+    <SolidColorBrush x:Key="Window.Background"              Color="#FF252525"/>
+    <SolidColorBrush x:Key="Window.Border"                  Color="#FF0079CB"/>
+    <SolidColorBrush x:Key="Window.Border.InActive"         Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="Window.Title.Border"            Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="Window.Title.Foreground"        Color="#FF494949"/>
+    <SolidColorBrush x:Key="Window.Title.Background"        Color="#FF0079CB"/>
+
+    <SolidColorBrush x:Key="ControlBox.Foreground"                  Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="ControlBox.Foreground.MouseOver"        Color="Black"/>
+    <SolidColorBrush x:Key="ControlBox.Foreground.Pressed"          Color="White"/>
+
+    <SolidColorBrush x:Key="ControlBox.Background"                  Color="#FF252525"/>
+    <SolidColorBrush x:Key="ControlBox.Background.MouseOver"        Color="#FF3F3F41"/>
+    <SolidColorBrush x:Key="ControlBox.Background.Pressed"          Color="#FF0079CB"/>
+
+    <SolidColorBrush x:Key="ControlBox.Foreground.MouseOver.Close"  Color="White"/>
+    <SolidColorBrush x:Key="ControlBox.Foreground.Pressed.Close"    Color="White"/>
+    <SolidColorBrush x:Key="ControlBox.Background.MouseOver.Close"  Color="#FFE81123"/>
+    <SolidColorBrush x:Key="ControlBox.Background.Pressed.Close"    Color="#FFF1707A"/>
+</ResourceDictionary>
