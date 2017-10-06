@@ -2,6 +2,5 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/_Dark.xaml"/>
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/WindowBase.xaml"/>
-        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/NumericUpDown.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -6,10 +6,9 @@
                xmlns:wb="clr-namespace:Hapoom.Windows;assembly=Hapoom.Windows"
                mc:Ignorable="d"
                Style="{StaticResource WindowBase}"
-               Title="MainWindow" 
-               Height="350" 
-               Width="525" 
-               FontFamily="NanumBarunGothic">
+               Title="http://hapoom-s.tistory.com/"
+               Height="350"
+               Width="525">
     <Grid>
     </Grid>
 </wb:WindowBase>

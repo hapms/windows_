@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Color           x:Key="Window.Border.DropShadow">#FF3EA0E6</Color>
     <Color           x:Key="Window.Border.DropShadow.InActive">Silver</Color>
-    <SolidColorBrush x:Key="Window.Logo1"                 Color="#FF0079CB"/>
+    <SolidColorBrush x:Key="Window.Logo"                  Color="#FF0079CB"/>
     <SolidColorBrush x:Key="Window.Background"            Color="White"/>
     <SolidColorBrush x:Key="Window.Border"                Color="#FF0079CB"/>
     <SolidColorBrush x:Key="Window.Border.InActive"       Color="Silver"/>
