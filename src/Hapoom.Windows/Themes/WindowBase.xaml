@@ -1,138 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Hapoom.Windows">
-
-    <Style x:Key="ControlBox" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{DynamicResource ControlBox.Background}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ControlBox.Foreground}"/>
-        <Setter Property="HorizontalContentAlignment"            Value="Center"/>
-        <Setter Property="VerticalContentAlignment"              Value="Center"/>
-        <Setter Property="SnapsToDevicePixels"                   Value="True"/>
-        <Setter Property="UseLayoutRounding"                     Value="True"/>
-        <Setter Property="TextOptions.TextFormattingMode"        Value="Display"/>
-        <Setter Property="IsTabStop"                             Value="False"/>
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource ControlBox.Foreground.MouseOver}" />
-                <Setter Property="Background" Value="{DynamicResource ControlBox.Background.MouseOver}" />
-            </Trigger>
-            <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource ControlBox.Foreground.Pressed}" />
-                <Setter Property="Background" Value="{DynamicResource ControlBox.Background.Pressed}" />
-            </Trigger>
-            <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Opacity" Value="0.5" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-    <Style x:Key="ControlBox.Minimize" TargetType="{x:Type Button}" BasedOn="{StaticResource ControlBox}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Background="{TemplateBinding Background}">
-                        <Rectangle 
-                            Width="10" Height="1" 
-                            StrokeThickness="0" 
-                            Fill="{TemplateBinding Foreground}" 
-                            VerticalAlignment="Center" 
-                            Margin="0,2,0,0"/>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="ControlBox.Maximize" TargetType="{x:Type Button}" BasedOn="{StaticResource ControlBox}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Grid Background="{TemplateBinding Background}">
-                        <Rectangle Width="10" Height="10" Stroke="{TemplateBinding Foreground}" SnapsToDevicePixels="True" StrokeThickness="1" Fill="{TemplateBinding Background}"/>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="Normal">
-                <Setter Property="Visibility" Value="Visible" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding ResizeMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="CanMinimize">
-                <Setter Property="Visibility" Value="Visible" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding ResizeMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="NoResize">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding ResizeMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="CanResizeWithGrip">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="Maximized">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-
-        </Style.Triggers>
-    </Style>
-    <Style x:Key="ControlBox.Restore"  TargetType="{x:Type Button}" BasedOn="{StaticResource ControlBox}">
-        <Setter Property="Visibility" Value="Collapsed" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Background="{TemplateBinding Background}">
-                        <Canvas VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Rectangle Width="9" Height="9" Stroke="{TemplateBinding Foreground}" SnapsToDevicePixels="True" StrokeThickness="1" Canvas.Left="-3" Canvas.Top="-5" Fill="{TemplateBinding Background}"/>
-                            <Rectangle Width="9" Height="9" Stroke="{TemplateBinding Foreground}" SnapsToDevicePixels="True" StrokeThickness="1" Canvas.Left="-5" Canvas.Top="-3" Fill="{TemplateBinding Background}"/>
-                        </Canvas>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="Normal">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding ResizeMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="NoResize">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding ResizeMode, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="CanResizeWithGrip">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Value="Maximized">
-                <Setter Property="Visibility" Value="Visible" />
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-    <Style x:Key="ControlBox.Close"    TargetType="{x:Type Button}" BasedOn="{StaticResource ControlBox}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid Background="{TemplateBinding Background}">
-                        <Line X1="0" Y1="0"  X2="10" Y2="10" Stroke="{TemplateBinding Foreground}" SnapsToDevicePixels="True" StrokeThickness="1" UseLayoutRounding="True" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <Line X1="0" Y1="10" X2="10" Y2="0"  Stroke="{TemplateBinding Foreground}" SnapsToDevicePixels="True" StrokeThickness="1" UseLayoutRounding="True" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource ControlBox.Foreground.MouseOver.Close}"/>
-                <Setter Property="Background" Value="{DynamicResource ControlBox.Background.MouseOver.Close}"/>
-            </Trigger>
-            <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource ControlBox.Foreground.Pressed.Close}"/>
-                <Setter Property="Background" Value="{DynamicResource ControlBox.Background.Pressed.Close}"/>
-            </Trigger>
-            <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Opacity" Value="0.5" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style x:Key="WindowBase" TargetType="{x:Type local:WindowBase}">
+                    xmlns:w="clr-namespace:Hapoom.Windows">
+    <Style x:Key="WindowBase" TargetType="{x:Type w:WindowBase}">
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="WindowStyle"        Value="None"/>
         <Setter Property="BorderThickness"    Value="1"/>
-        <Setter Property="BorderBrush"        Value="{DynamicResource Window.Border}"/>
-        <Setter Property="Background"         Value="{DynamicResource Window.Background}"/>
+        <Setter Property="BorderBrush"        Value="{DynamicResource {x:Static w:ResourceKeys.WindowBorderKey}}"/>
+        <Setter Property="Background"         Value="{DynamicResource {x:Static w:ResourceKeys.WindowBackgroundKey}}"/>
+        <Setter Property="DropShadowColor"    Value="{DynamicResource {x:Static w:ResourceKeys.WindowDropShadowColorKey}}"/>
         <Setter Property="Padding"            Value="5"/>
+        <Setter Property="FontFamily" Value="{StaticResource GothicFont}"/>
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
                 <WindowChrome 
@@ -144,21 +21,19 @@
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Window}">
+                <ControlTemplate TargetType="{x:Type w:WindowBase}">
                     <Grid>
                         <!-- Window Border -->
-                        <Border x:Name="PART_WindowBorder"
-                                BorderBrush="{TemplateBinding BorderBrush}"
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" x:Name="B"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Margin="{TemplateBinding Padding}">
                             <Border.Effect>
                                 <DropShadowEffect
                                     BlurRadius="7"
                                     ShadowDepth="0"
-                                    Color="{DynamicResource Window.Border.DropShadow}"/>
+                                    Color="{Binding Path=DropShadowColor, RelativeSource={RelativeSource AncestorType={x:Type w:WindowBase}}}"/>
                             </Border.Effect>
                         </Border>
-                        
                         <!-- Window Content -->
                         <Border BorderBrush="Transparent"
                                 BorderThickness="{TemplateBinding BorderThickness}"
@@ -166,39 +41,33 @@
                                 Margin="{TemplateBinding Padding}">
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="Auto"/>
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <Border Grid.Row="0"
-                                        BorderBrush="{DynamicResource Window.Title.Border}"
+                                        BorderBrush="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBorder}}"
+                                        Background="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBackground}}"
                                         BorderThickness="0,0,0,1">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="35"/>
-                                            <ColumnDefinition />
-                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <!-- Icon -->
-                                        <Border BorderThickness="0" Margin="5,0,0,0" HorizontalAlignment="Left">
-                                            <!-- https://materialdesignicons.com -->
-                                            <Viewbox Width="25" Height="25">
-                                                <Canvas Width="24" Height="24">
-                                                    <Path Data="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9H18V11H6M14,14H6V12H14M18,8H6V6H18" 
-                                                          Fill="{DynamicResource Window.Logo}" />
-                                                </Canvas>
-                                            </Viewbox>
-                                        </Border>
-                                        <!-- Title -->
-                                        <Grid Grid.Column="1">
-                                            <TextBlock 
-                                                Margin="0,0,0,0"
-                                                Foreground="{DynamicResource Window.Title.Foreground}"
+                                        <ContentPresenter Grid.Column="0" Content="{TemplateBinding Logo}"/>
+                                        <TextBlock 
+                                                Grid.Column="1"
+                                                Margin="0,0,0,2"
+                                                Foreground="{DynamicResource {x:Static w:ResourceKeys.WindowTitleForeground}}"
+                                                FontSize="14"
+                                                FontFamily="{TemplateBinding FontFamily}"
                                                 VerticalAlignment="Center"
-                                                Text="{Binding Path=Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
-                                                FontSize="14"/>
-                                        </Grid>
+                                                Text="{TemplateBinding Title}"/>
+                                        <ContentPresenter Grid.Column="2" Content="{TemplateBinding Title2}" WindowChrome.IsHitTestVisibleInChrome="True"/>
+                                        
                                         <!-- ControlBox -->
-                                        <Grid Grid.Column="2" 
+                                        <Grid Grid.Column="3" 
                                               WindowChrome.IsHitTestVisibleInChrome="True" 
                                               Width="140" Height="30" 
                                               VerticalAlignment="Top">
@@ -222,6 +91,24 @@
                             </Grid>
                         </Border>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsActive" Value="False">
+                            <Setter Property="BorderBrush"     Value="{DynamicResource {x:Static w:ResourceKeys.WindowBorderInActiveKey}}"/>
+                            <Setter Property="DropShadowColor" Value="{DynamicResource {x:Static w:ResourceKeys.WindowDropShadowInActiveColorKey}}"/>
+                        </Trigger>
+                        <Trigger Property="SnapState" Value="Middle">
+                            <Setter Property="Padding" Value="5,-1,5,-1"/>
+                        </Trigger>
+                        <Trigger Property="SnapState" Value="Left">
+                            <Setter Property="Padding" Value="-1,-1,1,-1"/>
+                        </Trigger>
+                        <Trigger Property="SnapState" Value="Right">
+                            <Setter Property="Padding" Value="1,-1,-1,-1"/>
+                        </Trigger>
+                        <Trigger Property="SnapState" Value="LeftRight">
+                            <Setter Property="Padding" Value="-1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

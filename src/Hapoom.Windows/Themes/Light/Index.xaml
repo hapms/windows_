@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ControlBox.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/WindowBase.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/BusyIndicator.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ScrollBar.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/TextBox.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ComboBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

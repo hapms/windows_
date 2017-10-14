@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:w="clr-namespace:Hapoom.Windows">
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemForegroundKey}"            Color="#FF999999"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemForegroundMouseOverKey}"   Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemForegroundSelectedKey}"    Color="#55AAFF"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemBackgroundKey}"            Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemBackgroundMouseOverKey}"   Color="#55AAFF"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxItemBackgroundSelectedKey}"    Color="#55AAFF"/>
+</ResourceDictionary>

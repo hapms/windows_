@@ -1,14 +1,84 @@
-﻿<wb:WindowBase x:Class="WpfApp.MainWindow"
+﻿<w:WindowBase x:Class="WpfApp.MainWindow"
                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-               xmlns:wb="clr-namespace:Hapoom.Windows;assembly=Hapoom.Windows"
+               xmlns:w="http://hapoom-s.tistory.com"
+               xmlns:local="clr-namespace:WpfApp"
                mc:Ignorable="d"
                Style="{StaticResource WindowBase}"
-               Title="http://hapoom-s.tistory.com/"
+               Title="하아푸움 http://hapoom-s.tistory.com/"
                Height="350"
-               Width="525">
+               Width="760">
     <Grid>
+        <StackPanel>
+            <ComboBox Width="200" Height="35" Margin="5">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="가나다라" FontFamily="{StaticResource NanumSquare}"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <ComboBox Width="200" Height="35" Margin="5">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <ComboBox Width="200" Height="35" Margin="5">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                    <ComboBoxItem Content="가나다라"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <TextBox Width="200" Height="35" Margin="5" 
+                     Padding="1,0,0,0" >
+                
+            </TextBox>
+            <TextBox Width="200" Height="100" Margin="5" 
+                     FontFamily="{StaticResource NanumSquare}"
+                     AcceptsReturn="True"
+                     VerticalContentAlignment="Stretch"
+                     VerticalScrollBarVisibility="Visible">
+                
+            </TextBox>
+        </StackPanel>
+        
     </Grid>
-</wb:WindowBase>
+    <w:WindowBase.Logo>
+        <Grid Width="30" Height="30" 
+              WindowChrome.IsHitTestVisibleInChrome="True"
+              MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <!-- https://materialdesignicons.com -->
+            <Viewbox Width="25" Height="25" Margin="3,3,3,0">
+                <Canvas Width="24" Height="24">
+                    <Path Data="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9H18V11H6M14,14H6V12H14M18,8H6V6H18" 
+                          Fill="{DynamicResource {x:Static w:ResourceKeys.WindowLogoBackgroundKey}}" />
+                </Canvas>
+            </Viewbox>
+        </Grid>
+    </w:WindowBase.Logo>
+    <w:WindowBase.Title2>
+        <Grid Width="120" Height="30">
+            <ComboBox Width="120" Margin="0, 3"
+                      BorderThickness="0"
+                      SelectedIndex="0"
+                      SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox.Items>
+                    <ComboBoxItem Content="Light"/>
+                    <ComboBoxItem Content="Dark"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <!--<Button Grid.Column="0" Width="70" Height="27" BorderThickness="0" Background="Transparent" Click="Button_Click1">Black</Button>
+            <Button Grid.Column="1" Width="70" Height="27" BorderThickness="0" Background="Transparent" Click="Button_Click2">White</Button>-->
+        </Grid>
+    </w:WindowBase.Title2>
+</w:WindowBase>

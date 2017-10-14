@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:w="clr-namespace:Hapoom.Windows">
+    <!-- Light -->
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.TextBoxForegroundKey}"     Color="Black"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.TextBoxBackgroundKey}"     Color="Transparent"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.TextBoxBorderBrushKey}"    Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.TextBoxCaretBrushKey}"     Color="#FF3EA0E6"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.TextBoxSelectionBrushKey}" Color="#55AAFF"/>
+</ResourceDictionary>

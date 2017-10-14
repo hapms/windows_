@@ -3,6 +3,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Markup;
 
 // 어셈블리에 대한 일반 정보는 다음 특성 집합을 통해 
 // 제어됩니다. 어셈블리와 관련된 정보를 수정하려면
@@ -52,3 +53,6 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: XmlnsDefinition("http://hapoom-s.tistory.com", clrNamespace: "Hapoom.Windows", AssemblyName = "Hapoom.Windows")]
+[assembly: XmlnsDefinition("http://hapoom-s.tistory.com", clrNamespace: "Hapoom.Windows.Controls", AssemblyName = "Hapoom.Windows")]

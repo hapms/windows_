@@ -1,6 +1,40 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+﻿<ResourceDictionary 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <FontFamily x:Key="MonospacedFont">/Hapoom.Windows.Resources;Component/Fonts/#D2Coding</FontFamily>
+    <FontFamily x:Key="GothicFont">/Hapoom.Windows.Resources;Component/Fonts/#NanumBarunGothic</FontFamily>
+
+    <FontFamily x:Key="NanumSquare">/Hapoom.Windows.Resources;Component/Fonts/#NanumSquare</FontFamily>
+
+    <VisualBrush x:Key="a">
+        <VisualBrush.Visual>
+            <Viewbox Width="16"
+                     Height="16"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     RenderTransformOrigin="0.5, 0.5">
+                <Canvas Width="24" Height="24">
+                    <Path Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                          Fill="{Binding Foreground}" />
+                </Canvas>
+                <Viewbox.RenderTransform>
+                    <RotateTransform/>
+                </Viewbox.RenderTransform>
+            </Viewbox>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    
+    
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/_Dark.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/Index.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Paths.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/ControlBox.xaml"/>
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/WindowBase.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/BusyIndicator.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/ScrollBar.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/ScrollViewer.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/TextBox.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/ComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/ComboBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
