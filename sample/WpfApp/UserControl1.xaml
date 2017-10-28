@@ -4,7 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp"
-             mc:Ignorable="d" Width="644.881" Height="347.244">
+             mc:Ignorable="d" 
+             Width="644.881" 
+             Height="347.244"
+             Background="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Background}"
+             >
     <UserControl.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="11"/>
@@ -20,8 +24,8 @@
             <Setter Property="BorderBrush" Value="Silver"/>
         </Style>
     </UserControl.Resources>
-    <Grid Background="White">
-        <Border Background="White" Width="600" Height="300">
+    <Grid>
+        <Border Width="600" Height="300">
             <Border.Effect>
                 <DropShadowEffect
                     BlurRadius="3"
@@ -29,16 +33,18 @@
                     Color="#FFE0E0E0"/>
             </Border.Effect>
         </Border>
-        <Border Background="White" Width="600" Height="300">
+        <Border Width="600" Height="300">
             <StackPanel Orientation="Horizontal">
                 <StackPanel>
-                    <Grid Height="40" Width="250" Margin="10">
+                    <Grid Height="60" Width="250" Margin="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Label   Grid.Row="0" Content="First Name" />
                         <TextBox Grid.Row="1" Text="가나다라마"/>
+                        <Label   Grid.Row="2" Content="필수입력값입니다." Foreground="OrangeRed" VerticalAlignment="Top" Margin="0,4,0,0"/>
                     </Grid>
                     <Grid Height="40" Width="250" Margin="10">
                         <Grid.RowDefinitions>

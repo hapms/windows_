@@ -7,15 +7,12 @@ namespace Hapoom.Windows
 {
     public class WindowBase : Window
     {
-        ResourceDictionary _dark;
-        ResourceDictionary _light;
-
         public WindowBase()
         {
             SetCommandBindings();
-            SetThemes(Themes.Light);
             StateChanged += OnStateChanged;
             SizeChanged  += OnSizeChanged;
+            ThemeSelector.Instance.Apply(this);
         }
 
         #region DropShadowColor
@@ -108,52 +105,6 @@ namespace Hapoom.Windows
 
         #endregion
 
-        #region Theme
-        public static readonly DependencyProperty ThemeProperty
-            = DependencyProperty.Register("Theme",
-                                           typeof(Themes), 
-                                           typeof(WindowBase),
-                                           new PropertyMetadata(Themes.Light, OnThemeChangedCallback));
-        public static Themes GetTheme(DependencyObject d)
-        {
-            return (Themes)d.GetValue(ThemeProperty);
-        }
-        public static void SetTheme(DependencyObject d, Themes value)
-        {
-            d.SetValue(ThemeProperty, value);
-        }
-        public Themes Theme
-        {
-            get { return GetTheme(this); }
-            set { SetTheme(this, value); }
-        }
-
-        private static void OnThemeChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            if (d is WindowBase w)
-                w.OnThemeChanged((Themes)e.NewValue);
-        }
-
-        protected void OnThemeChanged(Themes themes)
-        {
-            if (themes == Themes.Dark)
-                ChangeTheme(_dark);
-            if (themes == Themes.Light)
-                ChangeTheme(_light);
-        }
-
-        private void ChangeTheme(ResourceDictionary index)
-        {
-            foreach (var d in index.MergedDictionaries)
-            {
-                foreach (var key in d.Keys)
-                {
-                    Resources[key] = d[key];
-                }
-            }
-        }
-        #endregion
-
         private void SetCommandBindings()
         {
             CommandBindings.AddRange(new[] {
@@ -164,13 +115,6 @@ namespace Hapoom.Windows
             });
         }
 
-        private void SetThemes(Themes defaultTheme)
-        {
-            _dark  = (ResourceDictionary)Application.LoadComponent(new Uri(@"/Hapoom.Windows;component/Themes/Dark/Index.xaml" , UriKind.Relative));
-            _light = (ResourceDictionary)Application.LoadComponent(new Uri(@"/Hapoom.Windows;component/Themes/Light/Index.xaml", UriKind.Relative));
-            Theme  = defaultTheme;
-        }
-
         private void OnStateChanged(object sender, EventArgs e)
         {
             MaxHeight = (WindowState == WindowState.Maximized)
@@ -178,7 +122,7 @@ namespace Hapoom.Windows
                                 + BorderThickness.Top 
                                 + BorderThickness.Bottom 
                                 + Padding.Top
-                                + Padding.Bottom  // + 12
+                                + Padding.Bottom
                             : double.PositiveInfinity;
         }
 

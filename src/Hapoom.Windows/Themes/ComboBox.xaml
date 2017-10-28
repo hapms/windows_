@@ -5,6 +5,8 @@
         <Setter Property="Foreground"  Value="{DynamicResource {x:Static w:ResourceKeys.ComboBoxForegroundKey}}"/>
         <Setter Property="Background"  Value="{DynamicResource {x:Static w:ResourceKeys.ComboBoxBackgroundKey}}"/>
         <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}, Path=BorderBrush}"/>
+        <Setter Property="FontSize"    Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}, Path=FontSize}"/>
+        <Setter Property="FontWeight"  Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}, Path=FontWeight}"/>
         <Setter Property="IsTabStop"   Value="False"/>
         <Setter Property="Focusable"   Value="False"/>
         <Setter Property="ClickMode"   Value="Press"/>
@@ -73,6 +75,7 @@
         <Setter Property="BorderThickness"  Value="1"/>
         <Setter Property="FontSize"         Value="16"/>
         <Setter Property="FontWeight"       Value="Normal"/>
+        <Setter Property="SnapsToDevicePixels"  Value="True"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment"   Value="Center"/>
         <Setter Property="Template">
@@ -90,7 +93,7 @@
                                               CanContentScroll="True" 
                                               BorderThickness="1"
                                               VerticalScrollBarVisibility="Visible"
-                                              MinWidth="{Binding Width, RelativeSource={RelativeSource TemplatedParent}}"
+                                              MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"
                                               BorderBrush="{DynamicResource {x:Static w:ResourceKeys.ComboBoxPopupBorderBrushKey}}" 
                                               Background="{TemplateBinding Background}" 
                                               MaxHeight="{TemplateBinding MaxDropDownHeight}">

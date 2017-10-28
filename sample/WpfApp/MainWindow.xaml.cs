@@ -12,7 +12,6 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
-            Theme   = Themes.Light;
             Loaded += MainWindow_Loaded;
         }
 
@@ -29,12 +28,12 @@ namespace WpfApp
         {
             var cmb     = sender             as ComboBox;
             var item    = cmb ?.SelectedItem as ComboBoxItem;
-            var content = item?.Content?.ToString();
-            if (content == "Dark")
-                Theme = Themes.Dark;
-            else
-            if (content == "Light")
-                Theme = Themes.Light;
+            //var content = item?.Content?.ToString();
+            //if (content == "Dark")
+            //    Theme = Themes.Dark;
+            //else
+            //if (content == "Light")
+            //    Theme = Themes.Light;
         }
 
         private void Grid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

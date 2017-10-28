@@ -45,8 +45,8 @@
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <Border Grid.Row="0"
-                                        BorderBrush="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBorder}}"
-                                        Background="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBackground}}"
+                                        BorderBrush="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBorderKey}}"
+                                        Background="{DynamicResource {x:Static w:ResourceKeys.WindowTitleBackgroundKey}}"
                                         BorderThickness="0,0,0,1">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -59,7 +59,7 @@
                                         <TextBlock 
                                                 Grid.Column="1"
                                                 Margin="0,0,0,2"
-                                                Foreground="{DynamicResource {x:Static w:ResourceKeys.WindowTitleForeground}}"
+                                                Foreground="{DynamicResource {x:Static w:ResourceKeys.WindowTitleForegroundKey}}"
                                                 FontSize="14"
                                                 FontFamily="{TemplateBinding FontFamily}"
                                                 VerticalAlignment="Center"

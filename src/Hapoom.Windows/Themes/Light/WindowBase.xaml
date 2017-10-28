@@ -1,13 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:w="clr-namespace:Hapoom.Windows">
+    <!-- Light -->
     <Color           x:Key="{x:Static w:ResourceKeys.WindowDropShadowColorKey}">#FF3EA0E6</Color>
     <Color           x:Key="{x:Static w:ResourceKeys.WindowDropShadowInActiveColorKey}">Silver</Color>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowLogoBackgroundKey}" Color="#FF0079CB"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBackgroundKey}"     Color="White"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBorderKey}"         Color="#FF0079CB"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBorderInActiveKey}" Color="Silver"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBorder}"       Color="#FF0079CB"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleForeground}"   Color="#FF3F3F46"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBackground}"   Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBorderKey}"       Color="#FF0079CB"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleForegroundKey}"   Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBackgroundKey}"   Color="White"/>
 </ResourceDictionary>

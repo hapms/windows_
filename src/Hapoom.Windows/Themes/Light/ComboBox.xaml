@@ -2,9 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:w="clr-namespace:Hapoom.Windows">
     <!-- Light -->
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxForegroundKey}"          Color="Black"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxForegroundKey}"          Color="#FF999999"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxBackgroundKey}"          Color="Transparent"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxBorderBrushKey}"         Color="#FFD4D4D4"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxPopupBorderBrushKey}"    Color="#55AAFF"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxBorderBrushKey}"         Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ComboBoxPopupBorderBrushKey}"    Color="#FF55AAFF"/>
     
 </ResourceDictionary>

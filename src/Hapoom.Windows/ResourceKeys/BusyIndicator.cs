@@ -5,7 +5,6 @@ namespace Hapoom.Windows
 {
     public static partial class ResourceKeys
     {
-        public static ResourceKey BusyIndicatorForegroundKey { get; set; }
-            = new ComponentResourceKey(typeof(Brush), nameof(BusyIndicatorForegroundKey));
+        public static ResourceKey BusyIndicatorForegroundKey { get; } = CreateKey<Brush>();
     }
 }

@@ -7,5 +7,7 @@
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/TextBox.xaml"/>
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ComboBoxItem.xaml"/>
         <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/ComboBox.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/CheckBox.xaml"/>
+        <ResourceDictionary Source="/Hapoom.Windows;component/Themes/Light/RadioButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

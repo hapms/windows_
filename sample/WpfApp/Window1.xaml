@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="Window1" Height="300" Width="300">
-    <Grid>
-        <TextBox AcceptsReturn="True"
+    <StackPanel>
+        
+        <!--<TextBox AcceptsReturn="True"
                  HorizontalScrollBarVisibility="Visible"
-                 VerticalScrollBarVisibility="Visible" FontFamily="D2Coding"/>
-    </Grid>
+                 VerticalScrollBarVisibility="Visible" FontFamily="D2Coding"/>-->
+        <Button 
+            Height="40"/>
+
+        <Button 
+            Height="40" Click="Button_Click_1"/>
+    </StackPanel>
 </Window>

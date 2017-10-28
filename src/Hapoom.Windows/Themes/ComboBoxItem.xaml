@@ -5,26 +5,16 @@
         <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
         <Setter Property="Foreground"         Value="{DynamicResource {x:Static w:ResourceKeys.ComboBoxItemForegroundKey}}"/>
         <Setter Property="Background"         Value="{DynamicResource {x:Static w:ResourceKeys.ComboBoxItemBackgroundKey}}"/>
-        <Setter Property="TextElement.FontSize" Value="15"/>
+        <Setter Property="FontSize"           Value="15"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ComboBoxItem}">
                     <Border Background="{TemplateBinding Background}" 
                             VerticalAlignment="Center">
                         <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Grid.Column="0" x:Name="rectangle" Width="2"/>
                             <ContentPresenter Grid.Column="1" Margin="5,3,3,3"/>
                         </Grid>
                     </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Fill" Value="{DynamicResource {x:Static w:ResourceKeys.ComboBoxItemForegroundSelectedKey}}" TargetName="rectangle"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

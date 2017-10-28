@@ -52,7 +52,7 @@ namespace Hapoom.Windows.Controls
             = DependencyProperty.Register("IsBusy",
                                            typeof(bool), 
                                            typeof(BusyIndicator),
-                                           new PropertyMetadata(false, OnIsBusyPropertyChangedCallback));
+                                           new PropertyMetadata(false, OnIsBusyPropertyChanged));
         
         public static bool GetIsBusy(DependencyObject d)
         {
@@ -63,8 +63,7 @@ namespace Hapoom.Windows.Controls
             d.SetValue(IsBusyProperty, value);
         }
 
-        
-        private static void OnIsBusyPropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnIsBusyPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var bi = (BusyIndicator)d;
             bi.OnIsBusyChanged((bool)e.NewValue);

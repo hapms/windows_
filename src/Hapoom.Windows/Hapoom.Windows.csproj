@@ -49,7 +49,27 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\LabeledContentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\ComboBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Dark\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Dark\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -61,11 +81,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Dark\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Dark\ScrollBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Dark\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Light\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Light\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Light\Colors.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -156,7 +192,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\BusyIndicator.cs" />
+    <Compile Include="Controls\LabeledContentControl.cs" />
     <Compile Include="DrawingExtension.cs" />
+    <Compile Include="ResourceKeys\RadioButton.cs" />
+    <Compile Include="ResourceKeys\CheckBox.cs" />
     <Compile Include="ResourceKeys\ComboBox.cs" />
     <Compile Include="ResourceKeys\ComboBoxItem.cs" />
     <Compile Include="ResourceKeys\TextBox.cs" />
@@ -166,7 +205,10 @@
     <Compile Include="ResourceKeys\BusyIndicator.cs" />
     <Compile Include="Screen.cs" />
     <Compile Include="ResourceKeys.cs" />
+    <Compile Include="ThemeDictionary.cs" />
     <Compile Include="Themes.cs" />
+    <Compile Include="ThemeSelector.cs" />
+    <Compile Include="ToggleThemeCommand.cs" />
     <Compile Include="WindowBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

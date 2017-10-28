@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:w="clr-namespace:Hapoom.Windows">
+    <!-- Dark -->
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckBoxBackgroundKey}"                   Color="Transparent"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckBoxForegroundKey}"                   Color="#FF999999"/>
+
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkForegroundKey}"           Color="#FF55AAFF"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkUnCheckedForegroundKey}"  Color="Transparent"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkBackgroundKey}"           Color="Transparent"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkUnCheckedBackgroundKey}"  Color="Transparent"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkBorderBrushKey}"          Color="#FFD4D4D4"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkBorderBrushMouseOverKey}" Color="#FF55AAFF"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.CheckMarkBorderBrushCheckedKey}"   Color="#FFD4D4D4"/>
+</ResourceDictionary>

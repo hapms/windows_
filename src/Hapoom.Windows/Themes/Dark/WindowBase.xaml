@@ -8,7 +8,7 @@
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBackgroundKey}"     Color="#FF252525"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBorderKey}"         Color="#FF0079CB"/>
     <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowBorderInActiveKey}" Color="#FF3F3F46"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBorder}"       Color="#FF3F3F46"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleForeground}"   Color="#FF494949"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBackground}"   Color="#FF252525"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBorderKey}"       Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleForegroundKey}"   Color="#FF494949"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.WindowTitleBackgroundKey}"   Color="#FF252525"/>
 </ResourceDictionary>

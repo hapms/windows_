@@ -5,7 +5,6 @@ namespace Hapoom.Windows
 {
     public static partial class ResourceKeys
     {
-        public static ResourceKey ScrollBarThumbBackgroundKey { get; set; }
-            = new ComponentResourceKey(typeof(Brush), nameof(ScrollBarThumbBackgroundKey));
+        public static ResourceKey ScrollBarThumbBackgroundKey { get; } = CreateKey<Brush>();
     }
 }

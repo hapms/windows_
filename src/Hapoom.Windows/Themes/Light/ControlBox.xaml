@@ -1,16 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:w="clr-namespace:Hapoom.Windows">
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForeground}"                Color="#FF3F3F46"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundMouseOver}"       Color="Black"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundPressed}"         Color="White"/>
+    <!-- Light -->
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundKey}"                Color="#FF3F3F46"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundMouseOverKey}"       Color="Black"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundPressedKey}"         Color="White"/>
 
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackground}"                Color="White"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundMouseOver}"       Color="#FFF2F2F2"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundPressed}"         Color="#FF0079CB"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundKey}"                Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverKey}"       Color="#FFF2F2F2"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundPressedKey}"         Color="#FF0079CB"/>
 
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundMouseOverClose}"  Color="White"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundPressedClose}"    Color="White"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverClose}"  Color="#FFE81123"/>
-    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundPressedClose}"    Color="#FFF1707A"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundMouseOverCloseKey}"  Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxForegroundPressedCloseKey}"    Color="White"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverCloseKey}"  Color="#FFE81123"/>
+    <SolidColorBrush x:Key="{x:Static w:ResourceKeys.ControlBoxBackgroundPressedCloseKey}"    Color="#FFF1707A"/>
 </ResourceDictionary>

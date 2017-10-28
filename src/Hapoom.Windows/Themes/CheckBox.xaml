@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:w="clr-namespace:Hapoom.Windows"
+                    xmlns:c="clr-namespace:Hapoom.Windows.Controls">
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.CheckBoxForegroundKey}}"/>
+        <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.CheckBoxBackgroundKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment"   Value="Center"/>
+        <Setter Property="FontSize"   Value="16"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid Margin="2" Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- 체크 마크 -->
+                        <Viewbox Grid.Column="0"
+                                 Width="17" Height="17"
+                                 VerticalAlignment="Center" 
+                                 HorizontalAlignment="Center">
+                            <Border x:Name="CheckMarkBorder"
+                                    Width="26" Height="26"
+                                    BorderThickness="1"
+                                    UseLayoutRounding="True"
+                                    SnapsToDevicePixels="True"
+                                    BorderBrush="{DynamicResource {x:Static w:ResourceKeys.CheckMarkBorderBrushKey}}"
+                                    Background="{DynamicResource {x:Static w:ResourceKeys.CheckMarkBackgroundKey}}">
+                                <Canvas Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Path x:Name="CheckMark"
+                                          UseLayoutRounding="False"
+                                          SnapsToDevicePixels="False"
+                                          Fill="{DynamicResource {x:Static w:ResourceKeys.CheckMarkForegroundKey}}"
+                                          Data="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+                                </Canvas>
+                            </Border>
+                        </Viewbox>
+
+                        <!-- ContentPresenter -->
+                        <Grid Grid.Column="1" Margin="5,0,0,0">
+                            <ContentPresenter x:Name="presenter" 
+                                              RecognizesAccessKey="True" 
+                                              Content="{TemplateBinding Content}" 
+                                              ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                              ContentStringFormat="{TemplateBinding ContentStringFormat}" 
+                                              Margin="{TemplateBinding Padding}" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter Property="Opacity" Value="0" TargetName="CheckMark"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Fill" Value="{DynamicResource {x:Static w:ResourceKeys.CheckMarkUnCheckedForegroundKey}}" TargetName="CheckMark"/>
+                            <Setter Property="Background"  Value="{DynamicResource {x:Static w:ResourceKeys.CheckMarkUnCheckedBackgroundKey}}"  TargetName="CheckMarkBorder"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static w:ResourceKeys.CheckMarkBorderBrushMouseOverKey}}" TargetName="CheckMarkBorder"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

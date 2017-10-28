@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:w="clr-namespace:Hapoom.Windows">
     <Style x:Key="ControlBox" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackground}}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForeground}}"/>
+        <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundKey}}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundKey}}"/>
         <Setter Property="HorizontalContentAlignment"            Value="Center"/>
         <Setter Property="VerticalContentAlignment"              Value="Center"/>
         <Setter Property="SnapsToDevicePixels"                   Value="True"/>
@@ -13,12 +13,12 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundMouseOver}}" />
-                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundMouseOver}}" />
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundMouseOverKey}}" />
+                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverKey}}" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundPressed}}" />
-                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundPressed}}" />
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundPressedKey}}" />
+                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundPressedKey}}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Opacity" Value="0.5" />
@@ -112,12 +112,12 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundMouseOverClose}}"/>
-                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverClose}}"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundMouseOverCloseKey}}"/>
+                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundMouseOverCloseKey}}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundPressedClose}}"/>
-                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundPressedClose}}"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxForegroundPressedCloseKey}}"/>
+                <Setter Property="Background" Value="{DynamicResource {x:Static w:ResourceKeys.ControlBoxBackgroundPressedCloseKey}}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Opacity" Value="0.5" />
